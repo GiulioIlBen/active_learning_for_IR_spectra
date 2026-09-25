@@ -22,7 +22,7 @@ If you use this repository, please cite the associated ALIR paper. Bibliographic
 
 ## Repos
 
-- [active_learning](/active_learning/): Automates active learning workflows for atomistic systems, combining data generation, model training, task scheduling, and unified inspection of simulation results.
+- [active_learning](https://github.com/GiulioIlBen/active_learning_for_IR_spectra): Automates active learning workflows for atomistic systems, combining data generation, model training, task scheduling, and unified inspection of simulation results.
 - [moliterate](/moliterate/): Provides unified access to molecular datasets, combining atomic structures, metadata, and computed properties with modular filtering and collection inspection tools.
 
 ## Installation
@@ -34,7 +34,7 @@ git clone <your-fork-url>
 
 Installing a github subdirectory. For example if you want to install only moliterate:
 ```bash
-uv add git+https://github.com/SCM-NV/active_learning_workspace.git#subdirectory=moliterate
+uv add git+https://github.com/GiulioIlBen/active_learning_for_IR_spectra.git#subdirectory=moliterate
 ```
 
 ## Environment setup
