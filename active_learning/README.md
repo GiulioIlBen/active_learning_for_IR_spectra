@@ -37,6 +37,10 @@ uv lock --upgrade
 uv sync --extra ams --extra mace
 ```
 
+> **Older GPU compatibility:** If your GPU supports PyTorch only through version 2.8.0,
+> run `uv sync --extra ams --extra mace --upgrade-package torch==2.8.0` instead. This
+> resolves the lockfile with that PyTorch version and then installs it.
+
 `uv run` uses the workspace environment, so activation is not required.
 
 
