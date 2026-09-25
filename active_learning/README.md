@@ -23,7 +23,13 @@ What this package does not care:
 
 ## Environment setup
 
-From the [active_learning](/active_learning/), authenticate uv with the SCM package index, then create the environment with the AMS and MACE extras:
+Run the commands below from the [active_learning](/active_learning/) folder.
+
+> **SCM credentials:** Installing the AMS extra requires valid SCM credentials for the
+> SCM package index. If you do not have credentials yet, request a free trial at
+> [www.scm.com/free-trial](http://www.scm.com/free-trial).
+
+Authenticate uv with the SCM package index, then create the environment with the AMS and MACE extras:
 
 ```bash
 "$AMSBIN/uv" auth login "https://downloads.scm.com/Downloads/packages/uv/channels/2026.1/simple/"
@@ -31,7 +37,7 @@ uv lock --upgrade
 uv sync --extra ams --extra mace
 ```
 
-Run the commands below from the [active_learning](/active_learning/) folder. `uv run` uses the workspace environment, so activation is not required.
+`uv run` uses the workspace environment, so activation is not required.
 
 
 ## Tutorials
