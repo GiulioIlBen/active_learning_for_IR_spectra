@@ -1,0 +1,118 @@
+[project]
+name = "active-learning"
+version = "0.1.0"
+description = "manage on-the-fly active learning workflows"
+readme = "README.md"
+authors = [{ name = "Giulio Benedini", email = "benedini@scm.com" }]
+keywords = [
+    "chemistry",
+    "machine learning",
+    "active learning",
+    "machine learning interatomic potentials",
+]
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "ase>=3.23.0",
+    "loguru>=0.7.3",
+    "moliterate",
+    "plams>=2025.104",
+    "pydantic>=2.10.6",
+    "pydantic-settings>=2.8.1",
+    "pyyaml>=6.0.3",
+    "tabulate>=0.9.0",
+    "typing-extensions>=4.13.2",
+]
+
+[project.optional-dependencies]
+tutorial = ["jupyterlab>=4.3.8"]
+viz = [
+    "marimo>=0.21.1",
+    "pandas>=2.0.3",
+    "plotly>=6.5.0",
+    "seaborn>=0.13.2",
+]
+mace = ["mace-torch>=0.3.14"]
+spk = ["schnetpack>=2.0.0 ; python_full_version >= '3.12'"]
+# mattertune = ["mattertune ; python_full_version >= '3.10'"]
+torchsim = [
+    "torch-sim-atomistic>=0.5.2 ; python_full_version >= '3.12'",
+]
+ams = [
+    "cma>=4.4.4",
+    "scm-base; python_full_version == '3.12'",
+    "scm-utils",
+    "scm-conformers",
+    "scm-params",
+    "scm-external_engines",
+]
+
+# https://github.com/astral-sh/uv/issues/14844
+[tool.uv]
+index-strategy = "unsafe-best-match"
+
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+default = true
+
+[[tool.uv.index]]
+name = "scm"
+url = "https://downloads.scm.com/Downloads/packages/uv/channels/2026.1/simple/"
+default = false
+
+[project.scripts]
+al = "scm.active_learning.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/scm"]
+
+[dependency-groups]
+dev = [
+    "coverage>=7.6.1",
+    "pytest>=8.3.5",
+    "ruff>=0.14.10",
+    "testbook>=0.4.2",
+    "ty>=0.0.32",
+]
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+# Like Black, respect magic trailing commas.
+skip-magic-trailing-comma = false
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
+
+[tool.ruff.lint]
+# Core linting + import sorting
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    # "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+
+[tool.uv.sources]
+moliterate = { workspace = true }
+mattertune = { git = "https://github.com/Fung-Lab/MatterTune" }

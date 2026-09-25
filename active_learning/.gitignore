@@ -1,0 +1,22 @@
+# Python-generated files
+old
+
+coverage.json
+
+*.log
+
+*.db
+
+plams_workdir*
+
+tutorials/porting_tutorials
+
+.env
+.discord.env
+
+ALruns
+
+*.lock
+
+tutorials/notebooks/advanced-rerun-a-sampler.ipynb
+tutorials/notebooks/core-active-learning-concepts.ipynb

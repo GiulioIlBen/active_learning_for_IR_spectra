@@ -1,0 +1,12 @@
+.amspy
+*.log
+PLAMS
+tests/params
+tests/rkf
+
+.pytest_cache
+.mypy_cache
+coverage.json
+pytest-report.xml
+
+.env

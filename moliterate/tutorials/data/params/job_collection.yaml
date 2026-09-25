@@ -1,0 +1,1363 @@
+---
+dtype: JobCollection
+version: "2023.203"
+---
+ID: "cleaned.job_frame001"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.7710665929       3.1997906460       3.6555039094 
+                O       2.7719340604       3.2004462009       4.8462601481 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 1
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1489439350287
+---
+ID: "cleaned.job_frame002"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.7542754852       3.2548879118       3.8156108189 
+                O       2.8650465912       3.1500002075       4.9545530312 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 2
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1421277370592
+---
+ID: "cleaned.job_frame003"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.7535881438       3.2560275552       3.8173322729 
+                O       2.8654973498       3.1497561026       4.9531376466 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 3
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1416979285356
+---
+ID: "cleaned.job_frame004"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.7532473874       3.2565222314       3.8169518827 
+                O       2.8657531380       3.1495747994       4.9536619112 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 4
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1418332640457
+---
+ID: "cleaned.job_frame005"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.7530814113       3.2564183592       3.8161452891 
+                O       2.8657445777       3.1494095640       4.9531001278 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 5
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1418983806246
+---
+ID: "cleaned.job_frame006"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.7538893888       3.2554293766       3.8135857561 
+                O       2.8653056659       3.1498073539       4.9560870675 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 6
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1425973700564
+---
+ID: "cleaned.job_frame007"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.7505519209       3.2601098689       3.7960808473 
+                O       2.8675451412       3.1481403021       4.9693474791 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 7
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1446582245449
+---
+ID: "cleaned.job_frame008"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.7492543889       3.2620781787       3.7965824105 
+                O       2.8684552787       3.1475412351       4.9692835761 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 8
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1446108645355
+---
+ID: "cleaned.job_frame009"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.7491262450       3.2620682408       3.7956424061 
+                O       2.8682718981       3.1478544740       4.9687722947 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 9
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1446526094577
+---
+ID: "cleaned.job_frame010"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.7491557038       3.2619713982       3.7957677743 
+                O       2.8680952301       3.1480950326       4.9682596658 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 10
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1446573190392
+---
+ID: "cleaned.job_frame011"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.7491287373       3.2619834539       3.7949982844 
+                O       2.8680420807       3.1481665640       4.9695604581 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 11
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1446686513109
+---
+ID: "cleaned.job_frame012"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.7491654604       3.2620746076       3.7963170964 
+                O       2.8682938618       3.1478136772       4.9686438013 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 12
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1446294217112
+---
+ID: "cleaned.job_frame013"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.6457506919       3.4086225850       3.8139386914 
+                O       2.9241402116       3.1234510382       4.9161571490 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 13
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1408680639844
+---
+ID: "cleaned.job_frame014"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.6443330335       3.4106307799       3.8139022175 
+                O       2.9249125049       3.1231035136       4.9156676897 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 14
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1408316124605
+---
+ID: "cleaned.job_frame015"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.6447340621       3.4101026868       3.8150798553 
+                O       2.9245658575       3.1234365666       4.9146429373 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 15
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.140725907443
+---
+ID: "cleaned.job_frame016"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.6442481147       3.4101847525       3.8152294413 
+                O       2.9248943442       3.1233522116       4.9163981676 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 16
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1407749084342
+---
+ID: "cleaned.job_frame017"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.6442628017       3.4102189593       3.8141553098 
+                O       2.9244431123       3.1236687156       4.9175897791 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 17
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1408832997829
+---
+ID: "cleaned.job_frame018"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.6442328055       3.4103756914       3.8149427634 
+                O       2.9249044029       3.1232958915       4.9160726937 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 18
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1407812993438
+---
+ID: "cleaned.job_frame019"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.5310151135       3.5411382235       3.8898355317 
+                O       2.9819047038       3.1117236523       4.9097732556 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 19
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1330291394005
+---
+ID: "cleaned.job_frame020"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.5294972271       3.5428913300       3.8908396036 
+                O       2.9826688951       3.1115685057       4.9096888004 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 20
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1328821572694
+---
+ID: "cleaned.job_frame021"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.5301025660       3.5423615034       3.8917250000 
+                O       2.9821436279       3.1120436946       4.9088027123 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 21
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1329847639677
+---
+ID: "cleaned.job_frame022"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.5300299221       3.5430415584       3.8912989417 
+                O       2.9822731195       3.1120559276       4.9099136898 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 22
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1329210381086
+---
+ID: "cleaned.job_frame023"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.5318661906       3.5425299768       3.8908237219 
+                O       2.9809929307       3.1132549845       4.9102051997 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 23
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1330854320503
+---
+ID: "cleaned.job_frame024"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.5309137645       3.5430226627       3.8912512420 
+                O       2.9817273075       3.1125994489       4.9105711313 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 24
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1329715572911
+---
+ID: "cleaned.job_frame025"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.5233542456       3.6835811797       3.9968477258 
+                O       2.9684954884       3.1779242809       4.9700839128 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 25
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1287270019212
+---
+ID: "cleaned.job_frame026"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.5232649259       3.6854611835       3.9982626961 
+                O       2.9683108136       3.1788060491       4.9708867577 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 26
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1286736628946
+---
+ID: "cleaned.job_frame027"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.5240465157       3.6856778755       3.9973188914 
+                O       2.9680252334       3.1790340974       4.9694127103 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 27
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1287625946509
+---
+ID: "cleaned.job_frame028"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.5239836866       3.6859293254       3.9966377333 
+                O       2.9682073159       3.1788016801       4.9696437318 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 28
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1287460289813
+---
+ID: "cleaned.job_frame029"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.5240085039       3.6858267974       3.9971227878 
+                O       2.9681924777       3.1790317913       4.9697153932 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 29
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1287486215328
+---
+ID: "cleaned.job_frame030"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.5246775420       3.6829950054       3.9963620355 
+                O       2.9671762966       3.1794031351       4.9692220381 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 30
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1289079101355
+---
+ID: "cleaned.job_frame031"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.5402532789       3.6760954946       3.9906452633 
+                O       2.9516488714       3.1968098514       4.9590774214 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 31
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1298631331942
+---
+ID: "cleaned.job_frame032"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.5405892803       3.6784003451       3.9913328508 
+                O       2.9513691729       3.1978136517       4.9592072580 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 32
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1298422371251
+---
+ID: "cleaned.job_frame033"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.5405718492       3.6786287624       3.9903537068 
+                O       2.9517494033       3.1967483658       4.9596962011 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 33
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.129956398753
+---
+ID: "cleaned.job_frame034"
+ReferenceEngineID: None
+AMSInput: |
+  properties
+    gradients Yes
+  End
+  system
+    Atoms
+                C       2.5414116849       3.6759698772       3.9890136052 
+                O       2.9504931088       3.1980918952       4.9591134449 
+               Pt       4.1577878700       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      11.0874343200       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt      -0.0000000000      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       2.4004999502       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       4.8009999003       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       2.7718585800      -0.0000000000       2.2632130600 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       5.5437171600       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       9.7015050300       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       8.3155757400       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       4.1577878700       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       1.3859292900       0.8001666501       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       2.7718585800       3.2006666002       0.0000000000 QE.Label=Pt1 region=surface
+               Pt       6.9296464500       5.6011665504       0.0000000000 QE.Label=Pt1 region=surface
+    End
+    Lattice
+           8.3155757400     0.0000000000     0.0000000000
+           4.1577878700     7.2014998500     0.0000000000
+           0.0000000000     0.0000000000    12.0000000000
+    End
+  End
+  task singlepoint
+Frame: 34
+Origin: cleaned.job/ams.rkf
+OriginalEnergyHartree: -823.1300067519176

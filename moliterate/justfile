@@ -1,0 +1,100 @@
+up:
+    git pull --rebase
+
+# test everything but at first failure stop
+test:
+    echo "" > pytest.log
+    just test-base
+    just test-extras 
+    just test-amspy
+    just ruff
+
+# make all the tests
+test-all:
+    echo "" > pytest.log
+    -just test-base
+    -just test-extras 
+    -just test-amspy
+    -just ruff
+
+# temporary test only the ams interface, used before pushing
+test-amsruff:
+    echo "" > pytest.log
+    # one test currently failing...
+    just test-amspy
+    just ruff
+
+# I should add some extra testing conditions based on optional dependencies
+test-base:
+    uv run --isolated coverage run --source='scm.moliterate' -m pytest tests | tee -a pytest.log
+    just coverage-readme "test-base" 2
+    just log-look
+
+# test with all extras
+test-extras:
+    uv run --isolated --dev --extra tutorial --extra apricot --extra mace --extra chem coverage run --source='scm.moliterate' -m pytest tests | tee -a pytest.log
+    just coverage-readme "test-extras" 1
+    just log-look
+
+# test amspython
+test-amspy:
+    #!/usr/bin/env bash
+    source .env
+    source $AMSBASHRCPATH
+    echo $AMSHOME
+    # if [ -d ".amspy" ]; then
+    #     echo "Removing directory: .amspy"
+    #     rm -r ".amspy"
+    # fi
+    # amspython -m pip install --upgrade pip setuptools wheel
+    # amspython -m pip install uv
+    # amspython -m uv pip install --group dev -e .[chem,mace,apricot,tutorial,viz]
+    # amspython -m uv pip install "plams @ git+https://github.com/SCM-NV/PLAMS"
+    # if [ ! -d "PLAMS" ]; then
+    #     echo "Clone PLAMS"
+    #     git clone git@github.com:SCM-NV/PLAMS.git
+    # fi
+    uv run --isolated --all-extras coverage run --source='scm.moliterate' -m pytest tests | tee -a pytest.log
+    amspython -m coverage run --source='scm.moliterate' -m pytest tests | tee -a pytest.log
+    uv run --with=coverage coverage html
+    just coverage-readme "test-amspy" 0
+    echo "pytest.log"
+    tail "pytest.log"
+
+test-amspy-spec file='test_partition_criteria_2d.py':
+    #!/usr/bin/env bash
+    source .env
+    source $AMSBASHRCPATH
+    echo $AMSHOME
+    amspython -m pip install --upgrade pip
+    amspython -m pip install uv
+    amspython -m uv pip install --group dev -e .[chem,mace,apricot,tutorial,viz]
+    amspython -m uv pip install "plams @ git+https://github.com/SCM-NV/PLAMS"
+    amspython -m pytest tests/{{ file }} | tee -a pytest.log
+    echo "pytest.log"
+    tail "pytest.log"
+
+log-look:
+    echo "pytest.log"
+    tail "pytest.log"
+
+ruff:
+    just ruff-lint
+    just ruff-format
+
+ruff-lint:
+    uvx ruff check ./src/
+
+ruff-format:
+    uvx ruff format --check ./src/
+
+# look at https://docs.astral.sh/ruff/formatter/#sorting-imports
+ruff-format-do:
+    uvx ruff check --select I --fix
+    uvx ruff format ./src/
+    uvx ruff format ./tests
+
+# update README coverage line (CI-friendly)
+coverage-readme test='NotFound' test_index='0':
+    uv run --isolated --with=coverage coverage json -o coverage.json
+    uv run --isolated python scripts/update_readme_coverage.py --json coverage.json --pytest-log pytest.log --readme README.md --test {{ test }} --test-index {{ test_index }}

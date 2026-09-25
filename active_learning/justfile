@@ -1,0 +1,96 @@
+up:
+    git pull --rebase
+
+# test everything but at first failure stop
+test:
+    echo "" > pytest.log
+    just test-base
+    just test-extras 
+    just test-amspy
+    just ruff
+
+# make all the tests
+test-all:
+    echo "" > pytest.log
+    -just test-base
+    -just test-extras 
+    -just test-amspy
+    -just ruff
+
+# temporary test only the ams interface
+test-amsruff:
+    echo "" > pytest.log
+    # one test currently failing...
+    -just test-amspy
+    just ruff
+
+# uv run --isolated pytest tests
+test-base:
+    uv run --isolated coverage run --source='scm.active_learning' -m pytest tests | tee -a pytest.log
+    just log-look
+    just coverage-readme "test-base" 2
+
+# uv run --isolated --dev --extra mace --extra spk --extra torchsim pytest tests
+test-extras:
+    uv run --isolated --dev --extra mace --extra spk --extra torchsim coverage run --source='scm.active_learning' -m pytest tests | tee -a pytest.log
+    just log-look
+    just coverage-readme "test-extras" 1
+
+# here you can test very long tutorials, excluded from routine ones
+test-long:
+    #!/usr/bin/env bash
+    source .env
+    source $AMSBASHRCPATH
+    echo $AMSHOME
+    amspackages install m3gnet -y
+    uv run --isolated --all-extras -m pytest tests/other_tutorials.py | tee -a pytest.log
+
+# uv run --isolated --all-extras pytest tests
+test-amspy:
+    #!/usr/bin/env bash
+    source .env
+    source $AMSBASHRCPATH
+    echo $AMSHOME
+    amspackages install m3gnet -y
+    uv run --isolated --all-extras coverage run --source='scm.active_learning' -m pytest tests | tee -a pytest.log
+    uv run --with=coverage coverage html
+    just coverage-readme "test-amspy" 0
+    echo "pytest.log"
+    tail "pytest.log"
+
+log-look:
+    echo "pytest.log"
+    tail "pytest.log"
+
+ruff:
+    just ruff-format-do
+    just ruff-format
+    just ruff-lint
+
+ruff-lint:
+    uvx ruff check ./src/
+
+ruff-format:
+    uvx ruff format --check ./src/
+
+# look at https://docs.astral.sh/ruff/formatter/#sorting-imports
+ruff-format-do:
+    uvx ruff check --select I --fix
+    uvx ruff format ./src/
+    uvx ruff format ./tests
+
+# update README coverage line (CI-friendly)
+coverage-readme test='NotFound' test_index='0':
+    uv run --isolated --with=coverage coverage json -o coverage.json
+    uv run --isolated python scripts/update_readme_coverage.py --json coverage.json --pytest-log pytest.log --readme README.md --test {{ test }} --test-index {{ test_index }}
+
+run-tutorials-scripts:
+    uv run tutorials/scripts/mj0_test_engine.py
+    uv run tutorials/scripts/mj1_m3gnet.py
+    uv run tutorials/scripts/mj2_maceEFD.py
+    uv run tutorials/scripts/sal1_m3gnet.py
+    uv run tutorials/scripts/sal3_maceEFD.py
+
+# uv run ty check src/
+static:
+    uv run ty check src/

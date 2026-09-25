@@ -1,0 +1,439 @@
+tag: alir_mt
+start_engine:
+  type: ASEEngine
+  engine_id: cMACE
+  finetunable: true
+  calculator: scm.active_learning.mlip.mace_trainer.calculator.AMSMACECalculator
+  python:
+    type: Current
+    info: null
+  calculator_kwargs:
+    model_paths:
+    - "??to/be/filled??/member_000/results/model_stagetwo.model"
+    - "??to/be/filled??/member_001/results/model_stagetwo.model"
+    - "??to/be/filled??/member_002/results/model_stagetwo.model"
+    default_dtype: float64
+    device: cuda
+    dipole_units: e*Ang
+    model_type: EnergyDipoleMACE
+    mace_model_architecture:
+      model: EnergyDipolesMACE
+      hidden_irreps: 64x0e + 64x1o
+      MLP_irreps: 16x0e
+      max_ell: 3
+      correlation: 3
+      num_interactions: 2
+      gate: silu
+      r_max: 4.0
+labeller_engine:
+  type: AMSEngine
+  engine_id: GFNFF
+  finetunable: false
+  duplicate_sp_policy: raise
+  source_settings:
+    input:
+      GFNFF: {}
+      ams: {}
+journey:
+  type: MoleculesJourney
+  molecules: amino_acids.xyz
+  batch_by: molecules
+  batch_size: 20
+  history: []
+  max_attempts_per_task:
+    go: 20
+    md300: 20
+    conf: 20
+  molecule_import:
+    backend: ase
+    enabled: true
+    original_molecules: null
+    relative_path: journey_molecules.db
+  registry_:
+    molecules: []
+    steps_record: []
+  task_checker_getter:
+    go:
+    - ams
+    - input:
+        ams:
+          GeometryOptimization:
+            Convergence:
+              Quality: Good
+            MaxRestarts: 5
+            Method: Quasi-Newton
+            RestartDisplacement: 0.05
+          Properties:
+            DipoleMoment: true
+            NormalModes: true
+          Task: GeometryOptimization
+    - type: UnionCheckerGetter
+      members:
+      - run_getter: always
+        check_getter:
+          type: DecoupledCheckerGetter
+          checker:
+            type: AMSTrajChecker
+            checker_id: AMSTrajChecker
+            check_bond_breaking: true
+            max_delta_energy_per_atom_hartree: 0.01
+            max_delta_temperature: null
+            max_temperature: 5000.0
+            check_geometry_optimization_convergence: true
+          getter:
+            type: AMSTrajGetter
+            getter_id: GOTraj
+            condition_filters:
+            - type: RemoveUnreasonableTraj
+              checker_results_query: property='trajectory',metric='reasonable_final_frame'
+              energy_change_frame: next_if_go_converged
+            - type: FractionalTrajectorySelector
+              fractions:
+              - 0.5
+              - 1.0
+              min_unique_frames: 1
+      - run_getter: if_checks_pass
+        check_getter:
+          type: DecoupledCheckerGetter
+          checker:
+            type: NoneChecker
+            checker_id: NoneChecker
+          getter:
+            type: NMSGetters
+            getter_id: NMS
+            engine_file: null
+            max_n_structures: 5
+            min_wavenumber: 500
+            return_equ_atoms: false
+            seed: 20597
+            temperature: 300.0
+            thermal_en_theory: quantum
+      - run_getter: never
+        check_getter:
+          type: DecoupledCheckerGetter
+          checker:
+            type: AMSIRCommitteeAgreementChecker
+            checker_id: IRCommittee
+            min_committee_agreement: 0.9
+            broadening_width: 30.0
+            imaginary_threshold: -10.0
+            max_imaginary: 0
+          getter:
+            type: AMSTrajGetter
+            getter_id: IRCommitteeNoFrames
+    md300:
+    - ams
+    - input:
+        ams:
+          MolecularDynamics:
+            BinLog:
+              DipoleMoment: 'False'
+              PressureTensor: 'False'
+              Time: 'False'
+            CalcPressure: 'False'
+            Checkpoint:
+              Frequency: 1000
+            InitialVelocities:
+              Temperature: 300.0
+              Type: Random
+            NSteps: 10000
+            Thermostat:
+              Tau: 200.0
+              Temperature: 300.0
+              Type: NHC
+            TimeStep: 0.5
+            Trajectory:
+              SamplingFreq: 2
+              WriteBonds: 'False'
+              WriteCharges: 'False'
+              WriteEngineGradients: 'Yes'
+              WriteMolecules: 'False'
+              WriteVelocities: 'False'
+          ExitCondition:
+          - Type: AtomsTooClose
+            AtomsTooClose:
+              MinimumDistance: 0.7
+          - Type: EngineEnergyUncertainty
+            EngineEnergyUncertainty:
+              MaxUncertainty: 0.000992232
+          - Type: EngineGradientsUncertainty
+            EngineGradientsUncertainty:
+              MaxUncertainty: 0.029399458
+          Task: MolecularDynamics
+      on_status_change: {}
+    - type: DecoupledCheckerGetter
+      checker:
+        type: AMSTrajChecker
+        checker_id: AMSTrajChecker
+        check_bond_breaking: true
+        max_delta_energy_per_atom_hartree: 0.01
+        max_delta_temperature: null
+        max_temperature: 5000.0
+      getter:
+        type: AMSTrajGetter
+        getter_id: MDUnc
+        condition_filters:
+        - type: RemoveUnreasonableTraj
+          checker_results_query: property='trajectory',metric='reasonable_final_frame'
+        - type: DataSelector
+          low_data_threshold: 4
+          low_data_selector:
+            type: LinearSteppedFilter
+            step: -1
+            num_samples: 1
+          default_data_selector:
+            type: PipeFilter
+            filters:
+            - type: TopNFilter
+              partition_criterion:
+                type: PropertyCriterion
+                property_key: History%EngineEnergyU
+                post_process: null
+                unit_transform: null
+              num_samples: 0.25
+            - type: FarthestPointFilter
+              partition_criterion:
+                type: PropertyCriterion
+                property_key: MDHistory%Time
+                post_process: null
+                unit_transform: null
+              num_samples: 5
+              seed: 20597
+    conf:
+    - conformers
+    - input:
+        ams:
+          Generator:
+            Method: RDKit
+            RDKit:
+              InitialNConformers: 5
+          Task: Generate
+    - type: UnionCheckerGetter
+      members:
+      - run_getter: if_checks_pass
+        check_getter:
+          type: DecoupledCheckerGetter
+          checker:
+            type: ConfJobFailChecker
+            checker_id: ConfJFail
+            additional_error_strings:
+            - Major bond changes after geometry optimization of input conformer.
+            collect_geometry_errors: true
+            collect_worker_pool_cleanup_error: false
+            error_string: Geometry optimization failed! (Did not converge.)
+            ignored_error_strings:
+            - 'sed: preserving permissions'
+            - Unable to symlink
+            - are the same file
+            - 'sed: cannot rename'
+            - No such file or directory
+          getter:
+            type: ConformersGetter
+            getter_id: Conformers
+            max_n_structures: -1
+            seed: null
+  task_parallelization:
+    type: AMSParallelMaxJobsGPU
+    maxjobs: 4
+    nproc: 1
+    watch_ams_log_stdout: false
+callbacks:
+- type: FolderManagerCallback
+  root_dir:
+    base_dir: "??to/be/filled??"
+    run_name: null
+    run_root: null
+    timestamp_format: '%Y%m%d_%H%M%S-alir_mt'
+  cleanup:
+    keep_last_full_iterations: 2
+    mode: 'off'
+    preserve_root_entries:
+    - al_state.json
+    - al_state.yaml
+    - al_state.yml
+    - job_logfile.csv
+    - logfile
+  iter_dir_template: iter_{:02d}
+  labeller_name: labelled_data.db
+  log_al_state: true
+  logging_file: loop.log
+  logging_file_level: DEBUG
+  make_dirs: true
+  mlip_dataname: mlip_data
+  reset_shared_dataset: true
+  set_ase_md_save_folder: true
+  set_plams_jobmanager_folder: true
+  shared_dataset_name: train_validation_AL.db
+  state_format: yaml
+- type: ALStateLogger
+- type: ALMinimalLogger
+  log_al_iter_index: true
+  log_final_summary: true
+  log_history_table: true
+  log_journey_table: true
+- type: SkipIf
+  default_accuracy_checks_results: []
+  default_journey_advance_results:
+    info: {}
+    skip_training_reason: ''
+  if_start_engine_is_not_finetunable:
+  - ACCURACY
+  - CONVERGENCE
+  message: 'SkipIf: start engine is not finetunable'
+  when_true_restart_journey: true
+- type: ManualStopper
+  file_name: STOP_ACTIVE_LEARNING
+  folder_path: null
+  message_prefix: 'ManualStopper: stop requested'
+  skip_message: ManualStopper
+accuracy_checker:
+  settings:
+  - {property: energy, metric: mae, per_n_atoms: true, target: 0.007, atom_type: -1, components: -1, lower_is_better: true}
+  - {property: energy, metric: rmse, per_n_atoms: true, target: 0.008, atom_type: -1, components: -1, lower_is_better: true}
+  - {property: forces, metric: mae, per_n_atoms: false, target: 0.06, atom_type: -1, components: -1, lower_is_better: true}
+  - {property: forces, metric: rmse, per_n_atoms: false, target: 0.09, atom_type: -1, components: -1, lower_is_better: true}
+  - {property: forces, metric: mae, per_n_atoms: false, target: 0.09, atom_type: 1, components: -1, lower_is_better: true}
+  - {property: forces, metric: mae, per_n_atoms: false, target: 0.09, atom_type: 6, components: -1, lower_is_better: true}
+  - {property: forces, metric: mae, per_n_atoms: false, target: 0.09, atom_type: 7, components: -1, lower_is_better: true}
+  - {property: forces, metric: mae, per_n_atoms: false, target: 0.09, atom_type: 8, components: -1, lower_is_better: true}
+  - {property: forces, metric: mae, per_n_atoms: false, target: 0.09, atom_type: 16, components: -1, lower_is_better: true, no_data_is_success: true}
+  - {property: dipole, metric: mae, per_n_atoms: false, target: 0.04, atom_type: -1, components: -1, lower_is_better: true}
+  - {property: dipole, metric: rmse, per_n_atoms: false, target: 0.05, atom_type: -1, components: -1, lower_is_better: true}
+iterable_loop:
+  iteration_al: 0
+  reason: ''
+  start: 0
+  stop: 20
+labeller:
+  batch_collection: 1000
+  if_out_path_exists: rename
+  out_fmt: ASE
+  out_path: labelling_000.db
+  parallelization:
+    type: AMSParallelCPU
+    maxjobs: 8
+    nproc: 1
+    watch_ams_log_stdout: false
+  properties:
+  - {name: energy, unit: eV, description: '', shape: null}
+  - {name: forces, unit: eV/Ang, description: '', shape: null}
+  - {name: dipole, unit: e*Ang, description: '', shape: null}
+mlip_trainer:
+  type: MACETrainer
+  data:
+    config_file_name: config_file_path.yaml
+    dataset_subfolder: datasets
+    folder: "??to/be/filled??"
+    model_subfolder: results
+    training_file_name: training_set.xyz
+    validation_file_name: validation_set.xyz
+  extra_config:
+    amsgrad: true
+    ema: false
+    ema_decay: 0.99
+  property_aliases:
+    dipole:
+    - REF_dipole
+    - dipole
+    - dipole_moment
+    energy:
+    - REF_energy
+    - energy
+    - potential_energy
+    forces:
+    - REF_forces
+    - forces
+    - gradients
+    stress:
+    - REF_stress
+    - stress
+  save:
+    results: false
+    results_file_name: mlip_trainer_results.json
+    settings: false
+    settings_file_name: mace_trainer_settings.json
+  suppress_warnings: true
+  train_settings:
+    architecture:
+      model: EnergyDipolesMACE
+      loss: energy_forces_dipole
+      error_table: EnergyDipoleRMSE
+      energy_weight: 100.0
+      forces_weight: 5.0
+      dipole_weight: 1.0
+      hidden_irreps: 64x0e + 64x1o
+      num_channels: 64
+      max_L: 1
+      max_ell: 3
+      correlation: 3
+      num_interactions: 2
+      r_max: 4.0
+    batch_size: 5
+    valid_batch_size: 10
+    committee:
+      size: 3
+      seed: 20597
+      seed_stride: 1
+      parallel_members: 3
+      gpu_ids:
+      - 0
+      - 0
+      - 1
+    default_dtype: float64
+    delete_checkpoints_after_training: true
+    device: cuda
+    eval_interval: 5
+    learning_rate: 0.01
+    log_level: INFO
+    max_num_epochs: 2000
+    model_name: model
+    patch_load_foundations: true
+    patience: 50
+    save_all_checkpoints: false
+    swa: true
+    start_swa: 100
+    swa_energy_weight: 1000.0
+    valid_fraction: 0.1
+pre_filter:
+  type: ConditionsFilter
+  collect_from: properties
+  combine_conditions_fun: all
+  conditions: '@min_distance>0.7'
+  default: false
+post_filter:
+  type: ConditionsFilter
+  collect_from: properties
+  combine_conditions_fun: all
+  conditions: '@fmax<10'
+  default: false
+run_control:
+  cleanup_resume_iteration: true
+  mode: fresh
+splitting:
+  dataset:
+    type: InMemoryMolData
+    absolute_idxs: null
+    data_source: __memory__
+    transforms: []
+  seed: 20597
+  split_key: dataset
+  splitter: random
+  splitting_policy: policy_off
+  task_id_key: task_id
+  stratify_keys:
+  - task_id
+  - getter_id
+  - system_id
+  validation_set_fraction: 0.1
+  training_key: training_set
+  validation_key: validation_set
+trainer_checker:
+  type: TrainerChecker
+  groupby_metadata:
+  - dataset
+  n_failures_allowed: 0
+  metrics:
+    settings:
+    - {property: forces, metric: mae, per_n_atoms: false, target: 0.06, atom_type: -1, components: -1, lower_is_better: true}
+    - {property: dipole, metric: mae, per_n_atoms: false, target: 0.04, atom_type: -1, components: -1, lower_is_better: true}
+    - {property: energy, metric: mae, per_n_atoms: true, target: 0.007, atom_type: -1, components: -1, lower_is_better: true}

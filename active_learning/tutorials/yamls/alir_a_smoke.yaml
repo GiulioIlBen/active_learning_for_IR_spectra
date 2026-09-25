@@ -1,0 +1,188 @@
+# Two-iteration, non-parallel end-to-end active-learning smoke test.
+#
+# The first iteration samples with GFN1-xTB and trains a one-member MACE model.
+# The second uses that MACE model, so task execution, labelling, accuracy,
+# convergence, splitting, retraining, and trainer checks all run at least once.
+#
+# Run from the workspace root:
+# uv run al run active_learning/tutorials/yamls/alir_a_smoke.yaml
+#
+# Requires the `ams` and `mace` extras. Outputs are written next to this file
+# in tutorial_smoke_runs/ and are safe to remove after inspection.
+tag: alir_a_smoke
+start_engine:
+  type: AMSEngine
+  engine_id: GFN1xTB
+  finetunable: false
+  source_settings:
+    input:
+      DFTB:
+        Model: GFN1-xTB
+      ams: {}
+labeller_engine:
+  type: AMSEngine
+  engine_id: GFNFF
+  finetunable: false
+  duplicate_sp_policy: raise
+  source_settings:
+    input:
+      GFNFF: {}
+      ams: {}
+journey:
+  type: MoleculesJourney
+  molecules: amino_acids.xyz
+  batch_by: molecules
+  batch_size: 1
+  max_attempts_per_task:
+    go_nms1000: 1
+  molecule_import:
+    backend: ase
+    enabled: true
+    relative_path: journey_molecules.db
+  task_checker_getter:
+    go_nms1000:
+    - ams
+    - input:
+        ams:
+          GeometryOptimization:
+            Convergence:
+              Quality: Good
+            MaxRestarts: 5
+            Method: Quasi-Newton
+            RestartDisplacement: 0.05
+          Properties:
+            DipoleMoment: true
+            NormalModes: true
+          Task: GeometryOptimization
+    - type: UnionCheckerGetter
+      members:
+      - run_getter: always
+        check_getter:
+          type: DecoupledCheckerGetter
+          checker:
+            type: AMSTrajChecker
+            checker_id: AMSTrajChecker
+            check_bond_breaking: true
+            check_geometry_optimization_convergence: true
+            max_delta_energy_per_atom_hartree: 0.01
+            max_temperature: 5000.0
+          getter:
+            type: AMSTrajGetter
+            getter_id: GOFinal
+            condition_filters:
+            - type: RemoveUnreasonableTraj
+              checker_results_query: property='trajectory',metric='reasonable_final_frame'
+              energy_change_frame: next_if_go_converged
+            - type: FractionalTrajectorySelector
+              fractions: [1.0]
+              min_unique_frames: 1
+      - run_getter: if_checks_pass
+        check_getter:
+          type: DecoupledCheckerGetter
+          checker:
+            type: NoneChecker
+            checker_id: NoneChecker
+          getter:
+            type: NMSGetters
+            getter_id: NMS1000
+            max_n_structures: 5
+            min_wavenumber: 500
+            return_equ_atoms: false
+            seed: 20597
+            temperature: 1000.0
+            thermal_en_theory: quantum
+  task_parallelization:
+    type: AMSParallelCPU
+    maxjobs: 1
+    nproc: 1
+    watch_ams_log_stdout: false
+callbacks:
+- type: FolderManagerCallback
+  root_dir:
+    base_dir: tutorial_smoke_runs
+    timestamp_format: '%Y%m%d_%H%M%S-alir_a_smoke'
+  cleanup:
+    keep_last_full_iterations: 2
+    mode: 'off'
+  iter_dir_template: iter_{:02d}
+  labeller_name: labelled_data.db
+  log_al_state: true
+  logging_file: loop.log
+  logging_file_level: DEBUG
+  make_dirs: true
+  mlip_dataname: mlip_data
+  reset_shared_dataset: true
+  set_ase_md_save_folder: true
+  set_plams_jobmanager_folder: true
+  shared_dataset_name: train_validation_AL.db
+  state_format: yaml
+- type: ALStateLogger
+- type: ALMinimalLogger
+- type: SkipIf
+  if_start_engine_is_not_finetunable: [ACCURACY, CONVERGENCE]
+  when_true_restart_journey: true
+- type: ManualStopper
+  file_name: STOP_ACTIVE_LEARNING
+  message_prefix: 'ManualStopper: stop requested'
+  skip_message: ManualStopper
+iterable_loop:
+  start: 0
+  stop: 2
+labeller:
+  out_fmt: ASE
+  out_path: labelling_000.db
+  parallelization:
+    type: AMSParallelCPU
+    maxjobs: 1
+    nproc: 1
+    watch_ams_log_stdout: false
+  properties:
+  - {name: energy, unit: eV}
+  - {name: forces, unit: eV/Ang}
+  - {name: dipole, unit: e*Ang}
+mlip_trainer:
+  type: MACETrainer
+  data:
+    folder: tutorial_smoke_runs/mace_training
+  suppress_warnings: true
+  train_settings:
+    architecture:
+      model: EnergyDipolesMACE
+      loss: energy_forces_dipole
+      error_table: EnergyDipoleRMSE
+      energy_weight: 100.0
+      forces_weight: 5.0
+      dipole_weight: 1.0
+      hidden_irreps: 64x0e + 64x1o
+      num_channels: 64
+      max_L: 1
+      max_ell: 3
+      correlation: 3
+      num_interactions: 2
+      r_max: 4.0
+    batch_size: 1
+    valid_batch_size: 1
+    committee:
+      size: 1
+      seed: 20597
+      parallel_members: 1
+    device: cpu
+    default_dtype: float64
+    eval_interval: 1
+    max_num_epochs: 1
+    patience: 1
+    patch_load_foundations: true
+    swa: false
+splitting:
+  dataset:
+    type: InMemoryMolData
+    data_source: __memory__
+  seed: 20597
+  split_key: dataset
+  splitter: random
+  splitting_policy: policy_off
+  task_id_key: task_id
+  stratify_keys: [task_id, system_id]
+  validation_set_fraction: 1
+  training_key: training_set
+  validation_key: validation_set

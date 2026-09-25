@@ -1,0 +1,33 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+__marimo__
+.ruff_cache
+.pytest_cache
+htmlcov
+
+# Virtual environments
+.venv
+.coverage
+
+# optional_exclusion
+*_gitignore
+
+# ams env
+.amspy
+
+.ipynb_checkpoints
+
+.obsidian
+
+*.csv
+*.db
+*.out
+
+.codex
+uv.lock
+.vscode
