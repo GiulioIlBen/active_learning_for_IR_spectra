@@ -20,10 +20,19 @@ What this package does not care:
   <img src="images/active_learning.png" width="500px"/>
 </div> 
 
+
 ## Environment setup
 
-For the workspace environment setup, see the [workspace README](../README.md#environment-setup).
-Run all commands below from the `active_learning` directory.
+From the [active_learning](/active_learning/), authenticate uv with the SCM package index, then create the environment with the AMS and MACE extras:
+
+```bash
+"$AMSBIN/uv" auth login "https://downloads.scm.com/Downloads/packages/uv/channels/2026.1/simple/"
+uv lock --upgrade
+uv sync --extra ams --extra mace
+```
+
+Run the commands below from the [active_learning](/active_learning/) folder. `uv run` uses the workspace environment, so activation is not required.
+
 
 ## Tutorials
 

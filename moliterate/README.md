@@ -21,10 +21,6 @@ What `MolIterate` does not care:
   <img src="images/moliterate.png" width="500px"/>
 </div>
 
-## Environment setup
-
-For the workspace environment setup, see the [workspace README](../README.md#environment-setup).
-
 ## Example
 
 ```python

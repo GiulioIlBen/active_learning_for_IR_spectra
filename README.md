@@ -22,29 +22,15 @@ If you use this repository, please cite the associated ALIR paper. Bibliographic
 
 ## Repos
 
-- [active_learning](https://github.com/GiulioIlBen/active_learning_for_IR_spectra): Automates active learning workflows for atomistic systems, combining data generation, model training, task scheduling, and unified inspection of simulation results.
+- [active_learning](/active_learning/): Automates active learning workflows for atomistic systems, combining data generation, model training, task scheduling, and unified inspection of simulation results.
 - [moliterate](/moliterate/): Provides unified access to molecular datasets, combining atomic structures, metadata, and computed properties with modular filtering and collection inspection tools.
 
 ## Installation
 
-Fork this repository on GitHub, then clone your fork to install or develop `active_learning`:
-```bash
-git clone <your-fork-url>
-```
+To run active learning workflows fork/clone this repository and move into the directory [active_learning](/active_learning/).
 
-Installing a github subdirectory. For example if you want to install only moliterate:
+
+Installing moliterate package only:
 ```bash
 uv add git+https://github.com/GiulioIlBen/active_learning_for_IR_spectra.git#subdirectory=moliterate
 ```
-
-## Environment setup
-
-From the workspace root, authenticate uv with the SCM package index, then create the environment with the AMS and MACE extras:
-
-```bash
-"$AMSBIN/uv" auth login "https://downloads.scm.com/Downloads/packages/uv/channels/2026.1/simple/"
-uv lock --upgrade
-uv sync --extra ams --extra mace
-```
-
-Run the commands below from the workspace root. `uv run` uses the workspace environment, so activation is not required.
