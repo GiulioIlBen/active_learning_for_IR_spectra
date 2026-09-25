@@ -152,7 +152,7 @@ journey:
 callbacks:
 - type: FolderManagerCallback
   root_dir:
-    base_dir: "??to/be/filled??"
+    base_dir: "ALruns"
     run_name: null
     run_root: null
     timestamp_format: '%Y%m%d_%H%M%S-alir_baseline'
