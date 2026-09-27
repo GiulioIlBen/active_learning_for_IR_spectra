@@ -1,3 +1,8 @@
+<div style="text-align: center;">
+  <img src="assets/ALIR.gif" width="500px"/>
+</div> 
+
+
 # Workspace for active learning components
 
 This workspace contains relevant libraries constructed around active learning and vibrational spectroscopy.
