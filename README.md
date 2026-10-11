@@ -16,12 +16,15 @@ the paper should be evaluated separately.
 If you use this repository, please cite the associated ALIR paper. Bibliographic details will be added here:
 
 ```bibtex
-@article{ALIR_PAPER,
-  author  = {??to/be/filled??},
-  title   = {??to/be/filled??},
-  journal = {??to/be/filled??},
-  year    = {??to/be/filled??},
-  doi     = {??to/be/filled??},
+@article{10.1021/acs.jctc.6c00756,
+    author = {Benedini, Giulio and Hellström, Matti and Visscher, Lucas},
+    title = {Flexible On-the-Fly Active Learning for Molecular Infrared Spectra},
+    journal = {Journal of Chemical Theory and Computation},
+    year = {2026},
+    month = {09},
+    doi = {10.1021/acs.jctc.6c00756},
+    url = {https://doi.org/10.1021/acs.jctc.6c00756},
+    publisher={ACS Publications}
 }
 ```
 
